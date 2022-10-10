@@ -65,7 +65,7 @@ public class Tesis extends Escrito{
 
     @Override
     String interpretacion() {
-        return interpretacion;
+        return getInterpretacion();
     }
 
     @Override

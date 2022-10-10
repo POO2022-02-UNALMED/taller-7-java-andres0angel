@@ -23,13 +23,13 @@ public class Libro extends Escrito {
 
     @Override
     String interpretacion() {
-        return interpretacion;
+        return getInterpretacion();
     }
 
     @Override
     public String toString() {
-        return getOrigen() +"\n"+ getTitulo() +"\n"+ getAutor() +"\n"+ getPaginas() +"\n"+ getCo_autor()+"\n"+ getCo_autor()
-                +"\n"+ getEditorial()+"\n"+ getEdicion()+"\n"+ getInterpretacion();
+        return getOrigen() +"\n"+ getTitulo() +"\n"+ getAutor() +"\n"+ getPaginas() +"\n"+ getCo_autor()
+                +"\n"+ getEditorial()+"\n"+ getEdicion();
     }
 
     public String getCo_autor() {
