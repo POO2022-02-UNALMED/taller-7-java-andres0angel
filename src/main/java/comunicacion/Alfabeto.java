@@ -14,7 +14,7 @@ public class Alfabeto extends Pictograma{
 
     @Override
     String interpretacion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return getInterpretacion();
     }
     
     
@@ -22,17 +22,17 @@ public class Alfabeto extends Pictograma{
     @Override
     public String toString() {
         String nuevasLetras = "";
-        for (int i=0 ; i<letras.length-1; i++){
-            nuevasLetras+=letras[i]+", ";
+        for (int i=0 ; i<this.letras.length-1; i++){
+            nuevasLetras+=this.letras[i]+", ";
         }
         
-        nuevasLetras+=letras[letras.length-1];
+        nuevasLetras+=this.letras[this.letras.length-1];
 
         return nuevasLetras;
     }
     
     public int cantidadLetras(){
-        return letras.length;
+        return this.letras.length;
     }
     
     
