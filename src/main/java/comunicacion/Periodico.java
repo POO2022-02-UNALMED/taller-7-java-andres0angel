@@ -29,12 +29,13 @@ public class Periodico extends Escrito{
         return interpretacion;
     }
 
-    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
-        super(origen, titulo, autor, paginas);
-        this.fecha = fecha;
-        this.primicia = primicia;
-        this.interpretacion = interpretacion;
-    }
+    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
+			String interpretacion) {
+		super(origen, titulo, autor, paginas);
+		this.fecha = fecha;
+		this.primicia = primicia;
+		this.interpretacion = interpretacion;
+	}
 
     
 
@@ -45,13 +46,13 @@ public class Periodico extends Escrito{
 
     @Override
     String interpretacion() {
-        return getInterpretacion();
+        return this.interpretacion;
     }
 
     @Override
     public String toString() {
-        return this.getOrigen() +"\n"+ this.getTitulo() +"\n"+ this.getAutor() +"\n"+ this.getPaginas() +"\n"+ this.getFecha()+"\n"+ 
-                this.getPrimicia()
+        return this.getOrigen() +"\n"+ this.getTitulo() +"\n"+ this.getAutor() +"\n"+ this.getPaginas() +"\n"+ this.primicia +"\n"+ 
+                this.fecha
                 ;
     }
 }
