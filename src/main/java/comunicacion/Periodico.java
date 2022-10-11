@@ -1,58 +1,60 @@
 package comunicacion;
 
 public class Periodico extends Escrito{
-    private String fecha;
-    private String primicia;
-    private String interpretacion;
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    public void setPrimicia(String primicia) {
-        this.primicia = primicia;
-    }
-
-    public void setInterpretacion(String interpretacion) {
-        this.interpretacion = interpretacion;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public String getPrimicia() {
-        return primicia;
-    }
-
-    public String getInterpretacion() {
-        return interpretacion;
-    }
-
-    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
+	
+	private String fecha;
+	private String primicia;
+	private String interpretacion;
+	
+	public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
 			String interpretacion) {
 		super(origen, titulo, autor, paginas);
 		this.fecha = fecha;
 		this.primicia = primicia;
 		this.interpretacion = interpretacion;
 	}
+	
 
-    
+        @Override
+	public int palabrasTotales(int palabrasPagina) {
+		return super.getPaginas()*palabrasPagina*10;
+	}
+	
+        @Override
+	public String interpretacion() {
+		return this.interpretacion;
+	}
+	
+        @Override
+	public String toString() {
+		String n= this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.fecha + "\n" + this.primicia;
+                return n;
+        }
+        
+        //GET Y SET
+        
+	public String getFecha() {
+		return fecha;
+	}
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+	public String getPrimicia() {
+		return primicia;
+	}
+	public void setPrimicia(String primicia) {
+		this.primicia = primicia;
+	}
+	public String getInterpretacion() {
+		return interpretacion;
+	}
+	public void setInterpretacion(String interpretacion) {
+		this.interpretacion = interpretacion;
+	}
+	
+	
+        
+	
+	
 
-    @Override
-    int palabrasTotales(int palabrasPagina) {
-        return getPaginas()*10*palabrasPagina;
-    }
-
-    @Override
-    String interpretacion() {
-        return this.interpretacion;
-    }
-
-    @Override
-    public String toString() {
-        return this.getOrigen() +"\n"+ this.getTitulo() +"\n"+ this.getAutor() +"\n"+ this.getPaginas() +"\n"+ this.primicia +"\n"+ 
-                this.fecha
-                ;
-    }
 }

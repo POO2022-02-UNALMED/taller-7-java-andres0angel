@@ -1,9 +1,8 @@
 package comunicacion;
 
-public class Alfabeto extends Pictograma{
+public class Alfabeto extends Pictograma {
     private String[] letras;
     private String interpretacion;
-
     public Alfabeto(String origen, String[] letras, String interpretacion){
         super(origen);
         this.letras = letras;
@@ -11,53 +10,43 @@ public class Alfabeto extends Pictograma{
     }
     
     
-
-    @Override
-    String interpretacion() {
-        return this.interpretacion;
+@Override
+    public String interpretacion(){
+        return interpretacion;
+    }    
+    
+    public int cantidadLetras(){
+        return letras.length;
     }
+    public String[] getLetras(){
+        return letras;
+    }
+    
+    public void setInterpretacion(String interpretacion){
+        this.interpretacion = interpretacion;
+    }
+    
+    
+    public void setLetras(String[] letras){
+        this.letras = letras;
+    }
+    
+    
     
     
     
     @Override
     public String toString(){
-        String totalLetras = null;
+        String nuevasLetras = "";
         int cantid = 0;
         int j;
         for (j=0;j<letras.length;j++){
             cantid+=1;
             if (cantid==letras.length){    
-                totalLetras+=letras[j];
-            }else{totalLetras+=letras[j]+", ";}
+                nuevasLetras+=letras[j];
+            }else{nuevasLetras+=letras[j]+", ";}
         }
-        return totalLetras;
+        return nuevasLetras;
     }
-    
-    public int cantidadLetras(){
-        return this.letras.length;
-    }
-    
-    
-    public  String[] getLetras() {
-        return letras;
-    }
-
-    public String getInterpretacion() {
-        return interpretacion;
-    }
-
-    public void setLetras(String[] letras) {
-        this.letras = letras;
-    }
-
-    public void setInterpretacion(String interpretacion) {
-        this.interpretacion = interpretacion;
-    }
-    
-    
-    
-    
-    
-    
     
 }
